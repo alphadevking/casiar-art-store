@@ -22,7 +22,7 @@ export const Prenav:React.FC<GlobalTypes> = ( { openTime, closeTime } ) => {
   closeTime = "4pm"
 
   return (
-    <div className='bg-black/70 backdrop-blur-lg text-white flex w-full text-[10px] py-[5px] px-[5vw] fixed z-[9999]'>
+    <div className='bg-black/90 backdrop-blur-lg text-white flex w-full text-[11px] py-[5px] px-[5vw] fixed z-[9999]'>
 
       <div className='float-left'>
         <span>We are open from {openTime} to {closeTime}.</span>
@@ -30,10 +30,12 @@ export const Prenav:React.FC<GlobalTypes> = ( { openTime, closeTime } ) => {
 
       <div className='grow' />
 
-      <span className='flex'>
-        <BiCurrentLocation className='animate-pulse w-fit text-sm' />
-        {location.city}, {location.state}, {location.country}
-      </span>
+      <div className='flex gap-1'>
+        <BiCurrentLocation className='animate-pulse w-fit text-lg' />
+        <span>
+          {location.city}, {location.state}, {location.country}
+        </span>
+      </div>
 
       <div className='grow'/>
 
